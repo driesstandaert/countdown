@@ -1,0 +1,160 @@
+/* color variables */
+$firecracker-light: #FFD6BF;
+$firecracker-medium: #FF9966;
+$firecracker: #F75F2A;
+$coral-light: #FDCAC3;
+$green-light: #CCEBD8;
+$yellow-light: #FCEBB9;
+$berry-light: #F5D2E3;
+$neutral-white: #fff;
+$neutral-lightest: #F4F5F8;
+$neutral-light: #E6EAED;
+$neutral-darker: #2A3036;
+$neutral-black: #000;
+
+
+/* General styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  align-items: center;
+  background-color: $firecracker;
+  display: flex;
+  font-family: "Helvetica Neue", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.c-countdown {
+  color: $neutral-black;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 100;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+li {
+  display: inline-block;
+  font-size: 16px;
+  list-style-type: none;
+  padding: 32px;
+  text-align: center;
+}
+
+li span {
+  display: block;
+  font-size: 240px;
+  font-weight: bold;
+}
+
+canvas {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+}
+
+.c-dragzone {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1000;
+    overflow: hidden;
+    //pointer-events: none;
+}
+
+.c-keyline {
+  background: transparent;
+  width: 200px;
+  height: 31px;
+  padding: 14px 0px;
+  position:absolute;
+  z-index: 1000;
+  top: 0;
+  cursor:move;
+  
+  @for $i from 1 through 15 {
+    $rot: random(360);
+    $wid: 50 + random(300);
+  
+    &:nth-child(#{$i}) {
+			left: random(80) + vw;
+      top: random(80) + vh;
+			width: unquote($wid + 'px');
+      transform: rotate(#{$rot} + 'deg');
+    }
+  }
+
+  hr {
+    height: 3px;
+    background-color: $neutral-black;
+    border: none;
+  }
+}
+
+.c-svg {
+  position:absolute;
+  cursor:move;
+  z-index: 1001;
+}
+
+.c-svg-hexagon {
+  left: 50px;
+  top: 50px;
+}
+
+.c-svg-plus {
+  left: 1200px;
+  top: 80px;
+}
+
+.c-svg-cylinder {
+  left: 200px;
+  top: 700px;
+}
+
+
+@media screen and (max-width: 1024px) { 
+    li span {
+      display: block;
+      font-size: 140px;
+      font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 768px) {  
+  li {
+    padding: 16px;
+  }    
+  li span {
+    display: block;
+    font-size: 80px;
+    font-weight: bold;
+  }
+}
+
+
+@media screen and (max-width: 475px) {  
+  li {
+    padding: 16px;
+  }
+  li span {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
