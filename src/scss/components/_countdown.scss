@@ -3,9 +3,9 @@ $firecracker-light: #FFD6BF;
 $firecracker-medium: #FF9966;
 $firecracker: #F75F2A;
 $coral-light: #FDCAC3;
-$green-light: #CCEBD8;
-$yellow-light: #FCEBB9;
-$berry-light: #F5D2E3;
+$green-light: #B6EECB;
+$yellow-light: #FFE6A8;
+$berry-light: #FCC5DE;
 $neutral-white: #fff;
 $neutral-lightest: #F4F5F8;
 $neutral-light: #E6EAED;
@@ -26,7 +26,7 @@ html, body {
 
 body {
   align-items: center;
-  background-color: $firecracker;
+  background-color: $green-light;
   display: flex;
   font-family: "Helvetica Neue", sans-serif;
   overflow: hidden;
