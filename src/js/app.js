@@ -11,7 +11,7 @@ import '../scss/app.scss';
         hour = minute * 60,
         day = hour * 24;
 
-  let dday = "Apr 20, 2021 09:00:00",
+  let dday = "Apr 26, 2021 09:00:00",
       countDown = new Date(dday).getTime(),
       x = setInterval(function() {    
 
