@@ -178,3 +178,19 @@ canvas {
     font-weight: bold;
   }
 }
+
+.c-site {
+  color: $neutral-black;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1000;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+
+  a {
+    color: $neutral-black;
+  }
+}
